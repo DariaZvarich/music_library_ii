@@ -57,7 +57,6 @@ def test_delete_record(db_connection):
     db_connection.seed("seeds/music_library.sql")
     repository = ArtistRepository(db_connection)
     repository.delete(3) # Apologies to Taylor Swift fans
-
     result = repository.all()
     assert result == [
         Artist(1, "Pixies", "Rock"),
