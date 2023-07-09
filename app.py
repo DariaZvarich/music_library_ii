@@ -32,6 +32,15 @@ for album in album_repository.all():
     print(album)
 print(album_repository.find(1))
 
+albums = album_repository.all()
+albums_by_artist = []
+for album in albums:
+    if album.artist_id == artist.id:
+        albums_by_artist.append(album)
+        
+for album in albums_by_artist:
+    print(album)
+
 class Application:
     def __init__(self):
         self.connection = DatabaseConnection()
