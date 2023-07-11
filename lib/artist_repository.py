@@ -23,7 +23,7 @@ class ArtistRepository:
         row = rows[0]
         return Artist(row["id"], row["name"], row["genre"])
     
-    def find_with_lbums(self, artist_id):
+    def find_with_albums(self, artist_id):
         rows = self._connection.execute(
             "SELECT * FROM artists JOIN albums ON artists.id = albums.artist_id " \
             "WHERE artists.id = %s",

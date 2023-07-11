@@ -74,7 +74,7 @@ def test_find_with_albums(db_connection):
     repository = ArtistRepository(db_connection)
 
     result = repository.find_with_albums(1)
-    assert result == Artist(3, "Pixies", "Rock"), [
+    assert result == Artist(3, 'Pixies', 'Rock'), [
         Album(1, 'Doolittle', 1989, 1),
         Album(2, 'Surfer Rosa', 1988, 1),
         Album(3, 'Waterloo', 1974, 2)
